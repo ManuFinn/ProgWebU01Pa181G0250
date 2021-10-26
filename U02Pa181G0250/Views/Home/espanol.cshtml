@@ -1,0 +1,14 @@
+﻿@model IEnumerable<U02Pa181G0250.Models.Villancico>
+    @{ Layout = "Layout"; }
+
+    <div class="menu">
+        <a href="~/Home/index">Todos</a>
+        <a href="~/ingles" >En inglés</a>
+        <a href="~/espanol" class="active">En español</a>
+    </div>
+    <ul>
+        @foreach (var vi in Model)
+        {
+        <li><a href="~/villancico/@vi.Nombre.Replace(" ","-")">@vi.Nombre</a></li>
+        }
+    </ul>
